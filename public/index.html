@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Royal Military Academy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+  <style>
+    .tablink {
+      background-color: #555;
+      color: #e8c742;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 10px;
+      font-size: 18px;
+      width: 17%;
+      font-family: 'Sriracha', cursive;
+    }
+
+    .tablink:hover {
+      background-color: #777;
+    }
+
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 50px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 2;
+      padding: 0;
+      width: 180px;
+      background-color: #dbd9d9a1;
+    }
+
+    li a {
+      display: block;
+      color: #e8c742;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #555;
+      color: white;
+    }
+
+    h1 {
+      text-align: left;
+      font-size: 30px;
+      color: #e8c742;
+    }
+
+    h0 {
+      text-align: left;
+      font-size: 25px;
+      color: #000000;
+    }
+
+    h4 {
+      text-align: left;
+      font-size: 30px;
+      color: #e8c742;
+    }
+
+    .imgcn {
+      text-align: center;
+      display: horizontal;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .imgcenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: right;
+      border-bottom: 10px solid #dbd9d9a1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Sriracha', cursive;
+    }
+
+    /* Style the header */
+    header {
+      background-color: rgb(54, 75, 15);
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .nav1 {
+      float: left;
+      width: 15%;
+      height: 500px;
+      background: rgb(96, 96, 64);
+      padding: 30px;
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      color: #e8c742;
+    }
+
+    article {
+      float: left;
+      padding: 30px;
+      width: 70%;
+      background-color: #ffffffa1;
+      height: 500px;
+    }
+
+    .nav2 {
+      float: right;
+      width: 15%;
+      height: 500px;
+      background: rgb(96, 96, 64);
+      padding: 30px;
+      font-size: 15px;
+    }
+
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media (max-width: 600px) {
+
+      nav,
+      article {
+        width: 100%;
+        height: auto;
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Sriracha', cursive;
+      }
+
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <body background="image/army.jpg"></body>
+
+  <body background td="image/army.jpg"></body>
+  <div class="ul">
+  </div>
+
+  <h1> Royal Military Academy</h1>
+
+  <button class="tablink" onclick="openPage('', this, 'red')">Home</button>
+  <button class="tablink" onclick="openPage('', this, 'green')" id="defaultOpen">ข้อมูลทั่วไป</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'blue')">งานวิชาการ</button>
+  <button class="tablink" onclick="openPage('About', this, 'orange')">ภาพกิจกรรม</button>
+  <button class="tablink" onclick="openPage('About', this, 'orange')">ติดต่อเรา</button>
+
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+  </div>
+
+  <div id="ข้อมูลทั่วไป" class="tabcontent">
+    <h3>ข้อมูลทั่วไป</h3>
+  </div>
+
+  <div id="งานวิชาการ" class="tabcontent">
+    <h3>งานวิชาการt</h3>
+  </div>
+
+  <div id="ภาพกิจกรรม" class="tabcontent">
+    <h3>ภาพกิจกรรม</h3>
+  </div>
+
+  <div id="ติดต่อเรา" class="tabcontent">
+    <h3>ติดต่อเรา</h3>
+  </div>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  <form method="GET" action="http://www.google.co.th/custom" target="_blank">
+    <table cellspacing="3">
+
+      <input type="hidden" name="hl" value="th"><input type="text" name="q" size="20" maxlength="255">
+      <input type="submit" name="btnG" VALUE="ค้นหา.">
+      </td>
+      </tr>
+    </table>
+  </form>
+
+  <header>
+    <h4>
+      <marquee direction="left">เลิศน้ำใจ&emsp;&emsp; วินัยดี&emsp;&emsp; เชิดชูประเพณี&emsp;&emsp; สามัคคี&emsp;&emsp; อาวุโส</marquee>
+    </h4>
+  </header>
+
+  <section>
+    <div class="nav1">
+      <ul>
+        <li><a href="#home">นักเรียน</a></li>
+        <li><a href="#news">อาจารย์</a></li>
+        <li><a href="#contact">บุคลากร</a></li>
+        <li><a href="#about">แผนกวิชา</a></li>
+        <li><a href="#about">ลำดับชั้น</a></li>
+        <li><a href="#about">ระเบียบและข้อบังคับ</a></li>
+      </ul>
+    </div>
+
+    <article>
+      <h0>ศิษย์เก่าดีเด่น</h0>
+
+
+      <div class="imgcenter"><img src="image/pommed.jpg" alt="" width=80%></div>
+
+      <div class="imgcenter"><img src="image/danged.jpg" alt="" width=80%></div>
+
+      <div class="imgcenter"><img src="image/bb.jpg" alt="" width=80%></div>
+
+    </article>
+    <div class="nav2">
+
+      <div class="imgcn">
+        <img src="image/TUUed.jpg" alt="" width=118%></div>
+
+    </div>
+
+</body>
+</body>
+
+</html>
